@@ -30,3 +30,11 @@
     margin-top: 25px;
     font-weight: bold !important;
   }
+
+  .nav-wrapper {
+    background-color: #40E0D0;
+  }
+
+  .brand-logo {
+    padding-left: 15px !important;
+  }
