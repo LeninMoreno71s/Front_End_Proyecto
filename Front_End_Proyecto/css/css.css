@@ -14,3 +14,7 @@
   main {
     flex: 1 0 auto;
   }
+
+  .title-nosotros {
+    margin-bottom: 50px;
+  }
