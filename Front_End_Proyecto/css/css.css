@@ -18,3 +18,9 @@
   .title-nosotros {
     margin-bottom: 50px;
   }
+
+  .title-nosotros-datos {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-weight: bold !important;
+  }
