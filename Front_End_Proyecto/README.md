@@ -12,7 +12,7 @@ Convecciones Carmen es una Pyme dedicada a la prestación de servicios de modist
 
 ---
 
-## 3. Necesidad Digital Identificada
+## 3. Necesidad Identificada
 
 El negocio requiere una **plataforma web de difusión** que le permita mostrar sus trabajos y servicios al público general, ampliar su alcance más allá del boca a boca, y facilitar la compra de sus productos de forma directa. Actualmente no cuenta con presencia digital, lo que limita su visibilidad y sus posibilidades de crecimiento comercial.
 
