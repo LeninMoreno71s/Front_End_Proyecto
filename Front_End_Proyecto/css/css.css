@@ -17,6 +17,11 @@
     object-fit: cover;
 
   }
+  
+  .horario-nav {
+  font-size: 16px;   
+  padding: 2px 6px;  
+}
 
   main {
     flex: 1 0 auto;
@@ -36,8 +41,9 @@
     background-color: #40E0D0;
   }
 
-  .brand-logo {
-    padding-left: 15px !important;
+  .logo-img {
+  height: 350px;
+  margin-top: -25px;
   }
 
   /* ── Accesibilidad: foco visible para navegación con teclado ── */
