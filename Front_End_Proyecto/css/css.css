@@ -71,3 +71,7 @@
     object-fit: contain;
   }
 
+  .card_servicios {
+    border-radius: 15px;
+  }
+
