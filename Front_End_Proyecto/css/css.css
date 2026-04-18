@@ -13,7 +13,7 @@
   }
 
   .responsive-img {
-    height: 400px  !important;
+    height: 650px  !important;
     width: 100% !important;
     object-fit: cover;
 
@@ -40,6 +40,64 @@
 
   .barra-superior {
   background-color: #3FA572;
+  }
+
+  .carousel {
+    height: 700px !important; /* Un poco más de margen para los indicadores */
+    width: 100%;
+  }
+
+  .carousel .carousel-item {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    width: 100% !important;  /* Asegura que el contenedor use todo el ancho */
+  }
+
+  .carousel-item img {
+    width: auto !important; 
+    max-height: 700px;
+    object-fit: contain; /* Evita que la imagen se deforme */
+  }
+
+  /* Ajuste para que el contenedor permita posicionar las flechas */
+  .carousel-container {
+  position: relative;
+  overflow: hidden;
+  }
+
+/* Estilo para los botones flotantes */
+  .btn-floating i {
+  font-size: 2.5rem;
+  line-height: 56px; /* Centra el icono dentro del círculo */
+  }
+
+/* Evitar que las flechas desaparezcan en móviles */
+  .moveNextCarousel, .movePrevCarousel {
+  transform: translateY(-50%); /* Centrado vertical exacto */
+  }
+
+  .carousel.carousel-slider {
+  height: 700px !important; /* Ajusta según el tamaño de tus fotos */
+  }
+
+  .carousel .carousel-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .carousel .carousel-item img {
+  width: auto !important;
+  max-height: 100%;
+  object-fit: contain;
+  }
+
+  .carousel .indicators .indicator-item {
+  background-color: rgba(0,0,0,0.2);
+  }
+  .carousel .indicators .indicator-item.active {
+  background-color: #ff4081;
   }
 
   .logo-img {

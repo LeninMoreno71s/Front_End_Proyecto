@@ -37,13 +37,32 @@
   
   <!-- Contenido principal -->
   <main>
-    
+
      <div class="intro-trabajos">
-    <p class="center-align">Hola Soy Carmen y Tengo Mi Pyme De Confecciones Aqui Puedes Ver Mis Trabajos y Realizar Pedidos Entre Ellos Costuras, Reparacion e Incluso Trabajos Personalizados Para Usted</p>
+    <p class="center-align">✂️ Hola Soy Carmen y Tengo Mi Pyme De Confecciones Aqui Puedes Ver Mis Trabajos y Realizar Pedidos Entre Ellos Costuras, Reparacion e Incluso Trabajos Personalizados Para Usted 🧵 </p>
+  </div>
+    <div class="carousel-container" style="position: relative; overflow: hidden; padding-bottom: 30px;">
+  <h2 class="center-align">Trabajos Realizados</h2>
+  
+  <div class="carousel carousel-slider center">
+    <a class="carousel-item" href="#one!"><img src="img/oso_traje.webp" alt="Traje Oso"></a>
+    <a class="carousel-item" href="#two!"><img src="img/cabeza_oso.webp" alt="Cabeza Oso"></a>
+    <a class="carousel-item" href="#three!"><img src="img/saya-boy.webp" alt="Saya Boy"></a>
+    <a class="carousel-item" href="#four!"><img src="img/traje.webp" alt="Traje"></a>
   </div>
 
+  <a class="btn-floating btn-large waves-effect waves-light pink accent-2 movePrevCarousel" 
+     style="position: absolute; left: 10px; top: 55%; z-index: 10; transform: translateY(-50%);">
+    <i class="fas fa-chevron-left"></i>
+  </a>
+  <a class="btn-floating btn-large waves-effect waves-light pink accent-2 moveNextCarousel" 
+     style="position: absolute; right: 10px; top: 55%; z-index: 10; transform: translateY(-50%);">
+    <i class="fas fa-chevron-right"></i>
+  </a>
+</div>
+</div>
     <div class="products-content">
-      <h2 class="center-align">Trabajos Realizados</h2>
+      <h2 class="center-align">Comentarios Recibidos</h2>
       <div class="row">
         <div class="col s12 m3">
           <div class="card">
@@ -51,7 +70,7 @@
               <img class="responsive-img" src="img/oso_traje.webp" alt="Imagen Traje Oso">
             </div>
             <div class="card-content">
-              <h5  class="center-align ">Traje Oso</h5>
+              <h5  class="center-align ">Increible Resultado Nada Que Decir</h5>
             </div>
           </div>
         </div>
@@ -62,7 +81,7 @@
               <img class="responsive-img" src="img/cabeza_oso.webp" alt="Imagen Cabeza Oso">
             </div>
             <div class="card-content">
-              <h5  class="center-align ">Cabeza Oso</h5>
+              <h5  class="center-align ">Excelente Para Usar Con El Traje</h5>
             </div>
           </div>
         </div>
@@ -73,7 +92,7 @@
               <img class="responsive-img" src="img/saya-boy.webp" alt="Imagen de un disfraz de Saya Boy">
             </div>
             <div class="card-content">
-              <h5  class="center-align ">Saya Boy</h5>
+              <h5  class="center-align ">Pedi Este Traje Para Un Familiar y Le Encanto</h5>
             </div>
           </div>
         </div>
@@ -84,7 +103,7 @@
               <img class="responsive-img" src="img/traje.webp" alt="Imagen de un traje">
             </div>
             <div class="card-content">
-              <h5  class="center-align ">Traje</h5>
+              <h5  class="center-align ">Necesitaba Este Traje Para Mi Hijo Para Su Obra De Teatro y Me Gusto El Resultado</h5>
             </div>
           </div>
         </div>
@@ -135,5 +154,30 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Inicialización del carrusel
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, {
+    fullWidth: true,
+    indicators: true
+  });
+
+  // Capturamos la instancia del primer carrusel
+  var instance = M.Carousel.getInstance(document.querySelector('.carousel'));
+
+  // Evento para flecha izquierda
+  document.querySelector('.movePrevCarousel').addEventListener('click', function(e) {
+    e.preventDefault();
+    instance.prev();
+  });
+
+  // Evento para flecha derecha
+  document.querySelector('.moveNextCarousel').addEventListener('click', function(e) {
+    e.preventDefault();
+    instance.next();
+  });
+  });
+  </script>
 </body>
 </html>
