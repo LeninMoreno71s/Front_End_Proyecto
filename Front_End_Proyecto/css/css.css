@@ -9,7 +9,7 @@
     min-height: 100vh;
     flex-direction: column;
     font-size: 16px;
-    background-color: #FFD1DC;
+    background-color: #E6BE8A;
   }
 
   .responsive-img {
@@ -38,10 +38,32 @@
     font-weight: bold !important;
   }
 
+  .barra-superior {
+  background-color: #3FA572;
+  }
 
   .logo-img {
   height: 350px;
   margin-top: -25px;
+  }
+
+  .logo-alter {
+  height: 300px;
+  position: absolute;
+  top: -50px;
+  left: -1275px;
+  }
+
+  .products-content {
+  margin-top: 50px;
+  }
+
+  .intro-trabajos {
+  margin-top: 300px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  color: #222;
   }
 
   /* ── Accesibilidad: foco visible para navegación con teclado ── */
@@ -60,7 +82,7 @@
   }
   
   .page-footer {
-    background-color: #CBA6F7; /* Morado pastel */
+    background-color: #b93355;
   }
   
   .responsive-service-img {
