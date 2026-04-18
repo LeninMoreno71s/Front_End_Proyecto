@@ -62,4 +62,24 @@
   .page-footer {
     background-color: #CBA6F7; /* Morado pastel */
   }
+  
+  .responsive-service-img {
+    height: 150px !important;
+    width: auto !important;
+    margin: 20px auto 0 !important;
+    display: block;
+    object-fit: contain;
+  }
+
+  .card_servicios {
+    border-radius: 15px;
+  }
+
+  .link_correo {
+    color: white;
+  }
+
+  .link_correo:hover {
+    color: #FFD1DC;
+  }
 
