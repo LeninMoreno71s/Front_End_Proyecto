@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 
-*, *::before, *::after {
+*:not(i):not(.fas):not(.fab):not(.far):not(.fal):not(.fad):not(.fat):not(.material-icons) {
   font-family: 'Nunito', sans-serif;
 }
 
@@ -42,63 +42,98 @@
   background-color: #3FA572;
   }
 
+  /* ── Estilos Limpios del Carrusel ── */
+  .carousel-container {
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.1); /* Sutil fondo para separar secciones */
+    border-radius: 20px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.05);
+  }
+
+  .carousel-container h2 {
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #444;
+  }
+
   .carousel {
-    height: 700px !important; /* Un poco más de margen para los indicadores */
+    height: 600px !important;
     width: 100%;
   }
 
+  .carousel.carousel-slider {
+    height: 600px !important;
+  }
+
   .carousel .carousel-item {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    width: 100% !important;  /* Asegura que el contenedor use todo el ancho */
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    opacity: 0; /* Inactivo */
+    transition: opacity 0.5s ease;
+  }
+
+  .carousel .carousel-item.active {
+    opacity: 1;
   }
 
   .carousel-item img {
     width: auto !important; 
-    max-height: 700px;
-    object-fit: contain; /* Evita que la imagen se deforme */
+    max-height: 550px;
+    border-radius: 15px; /* Bordes suaves */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Sombra elegante */
+    transition: transform 0.3s ease;
+    object-fit: contain;
   }
 
-  /* Ajuste para que el contenedor permita posicionar las flechas */
-  .carousel-container {
-  position: relative;
-  overflow: hidden;
+  .carousel-item img:hover {
+    transform: scale(1.02); /* Micro-interacción */
   }
 
-/* Estilo para los botones flotantes */
-  .btn-floating i {
-  font-size: 2.5rem;
-  line-height: 56px; /* Centra el icono dentro del círculo */
-  }
-
-/* Evitar que las flechas desaparezcan en móviles */
+  /* Botones de navegación con desenfoque de fondo */
   .moveNextCarousel, .movePrevCarousel {
-  transform: translateY(-50%); /* Centrado vertical exacto */
+    position: absolute;
+    top: 55%;
+    z-index: 10;
+    transform: translateY(-50%);
+    background-color: rgba(255, 64, 129, 0.7) !important;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    transition: all 0.3s ease !important;
   }
 
-  .carousel.carousel-slider {
-  height: 700px !important; /* Ajusta según el tamaño de tus fotos */
+  .movePrevCarousel {
+    left: 10px;
   }
 
-  .carousel .carousel-item {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
+  .moveNextCarousel {
+    right: 10px;
   }
 
-  .carousel .carousel-item img {
-  width: auto !important;
-  max-height: 100%;
-  object-fit: contain;
+  .moveNextCarousel:hover, .movePrevCarousel:hover {
+    background-color: rgba(255, 64, 129, 1) !important;
+    transform: translateY(-50%) scale(1.1);
   }
 
   .carousel .indicators .indicator-item {
-  background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.15);
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    transition: transform 0.3s ease;
   }
+
   .carousel .indicators .indicator-item.active {
-  background-color: #ff4081;
+    background-color: #ff4081;
+    transform: scale(1.3);
   }
+
+  /* ───────────────────────────────── */
 
   .logo-img {
   height: 350px;
@@ -118,13 +153,13 @@
 
   .intro-trabajos {
   margin-top: 300px;
-  margin-bottom: 30px;
+  margin-bottom: -20px;
   font-size: 28px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   color: #222;
   }
 
-  /* ── Accesibilidad: foco visible para navegación con teclado ── */
+  /* ── Accesibilidad ── */
   a:focus,
   button:focus,
   input:focus,
@@ -136,7 +171,20 @@
   }
   
   nav {
-    background-color: lemonchiffon;
+    background-color: #3FA572; /* Color base del nav */
+  }
+
+  .sidenav {
+    background-color: #3FA572;
+  }
+
+  .sidenav li a {
+    color: white !important;
+    font-weight: 600;
+  }
+
+  .sidenav li a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
   }
   
   .page-footer {
@@ -163,3 +211,43 @@
     color: #FFD1DC;
   }
 
+  /* Estilos para el Mapa Responsivo */
+  .map-container {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    margin-left: auto;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .map-container {
+      max-width: 100%;
+      height: 200px;
+      margin-top: 20px;
+    }
+    
+    .logo-img {
+      height: 200px;
+      margin-top: 0;
+    }
+
+    .intro-trabajos {
+      margin-top: 150px;
+      font-size: 20px;
+    }
+
+    .carousel, .carousel.carousel-slider {
+      height: 400px !important;
+    }
+    
+    .carousel-item img {
+      max-height: 350px;
+    }
+  }

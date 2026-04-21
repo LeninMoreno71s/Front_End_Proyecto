@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Se agrega referencias de materialize-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Se agrega referencias de iconos de google -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Se agrega referencias de css personalizado-->
   <link rel="stylesheet" href="css/css.css">
 
@@ -19,19 +21,28 @@
   <!-- aqui va la Barra superior -->
   <header>
     <nav class="barra-superior">
-  <div class="nav-wrapper center-align">
+  <div class="nav-wrapper">
     <a href="index.html" class="brand-logo center">
       <img src="img/ConC v3.png" alt="Logo Mi Empresa" class="logo-img">
     </a>
+
+    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="nosotros.html">Sobre Nosotros</a></li>
         </ul>
-        <span class="right horario-nav">Horario de atención: 8:00 - 19:00</span>
+        <span class="right horario-nav hide-on-small-only">Horario de atención: 8:00 - 19:00</span>
       </div>
     </nav>
+
+    <!-- Menú lateral para móviles -->
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="nosotros.html">Sobre Nosotros</a></li>
+    </ul>
   </header>
 
   
@@ -41,8 +52,8 @@
      <div class="intro-trabajos">
     <p class="center-align">✂️ Hola Soy Carmen y Tengo Mi Pyme De Confecciones Aqui Puedes Ver Mis Trabajos y Realizar Pedidos Entre Ellos Costuras, Reparacion e Incluso Trabajos Personalizados Para Usted 🧵 </p>
   </div>
-    <div class="carousel-container" style="position: relative; overflow: hidden; padding-bottom: 30px;">
-  <h2 class="center-align">Trabajos Realizados</h2>
+    <div class="carousel-container">
+  <h2 class="center-align"><strong>Trabajos Realizados</strong></h2>
   
   <div class="carousel carousel-slider center">
     <a class="carousel-item" href="#one!"><img src="img/oso_traje.webp" alt="Traje Oso"></a>
@@ -51,18 +62,16 @@
     <a class="carousel-item" href="#four!"><img src="img/traje.webp" alt="Traje"></a>
   </div>
 
-  <a class="btn-floating btn-large waves-effect waves-light pink accent-2 movePrevCarousel" 
-     style="position: absolute; left: 10px; top: 55%; z-index: 10; transform: translateY(-50%);">
+  <a class="btn-floating btn-large waves-effect waves-light pink accent-2 movePrevCarousel">
     <i class="fas fa-chevron-left"></i>
   </a>
-  <a class="btn-floating btn-large waves-effect waves-light pink accent-2 moveNextCarousel" 
-     style="position: absolute; right: 10px; top: 55%; z-index: 10; transform: translateY(-50%);">
+  <a class="btn-floating btn-large waves-effect waves-light pink accent-2 moveNextCarousel">
     <i class="fas fa-chevron-right"></i>
   </a>
 </div>
 </div>
     <div class="products-content">
-      <h2 class="center-align">Comentarios Recibidos</h2>
+      <h2 class="center-align"><strong>Comentarios Recibidos</strong></h2>
       <div class="row">
         <div class="col s12 m3">
           <div class="card">
@@ -132,14 +141,14 @@
 
         <div class="col s12 m6 right-align">
           <h5 class="white-text">Ubicación</h5>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!4v1776399993003!6m8!1m7!1stLhyUdAjSl9Hm99v_wA_qw!2m2!1d-27.35488574480108!2d-70.31295464210376!3f214.4098993925791!4f-11.968861570810489!5f0.7820865974627469" 
-            width="400" 
-            height="250" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-          </iframe>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!4v1776399993003!6m8!1m7!1stLhyUdAjSl9Hm99v_wA_qw!2m2!1d-27.35488574480108!2d-70.31295464210376!3f214.4098993925791!4f-11.968861570810489!5f0.7820865974627469" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -154,30 +163,6 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-  // Inicialización del carrusel
-  var elems = document.querySelectorAll('.carousel');
-  var instances = M.Carousel.init(elems, {
-    fullWidth: true,
-    indicators: true
-  });
-
-  // Capturamos la instancia del primer carrusel
-  var instance = M.Carousel.getInstance(document.querySelector('.carousel'));
-
-  // Evento para flecha izquierda
-  document.querySelector('.movePrevCarousel').addEventListener('click', function(e) {
-    e.preventDefault();
-    instance.prev();
-  });
-
-  // Evento para flecha derecha
-  document.querySelector('.moveNextCarousel').addEventListener('click', function(e) {
-    e.preventDefault();
-    instance.next();
-  });
-  });
-  </script>
+  <script src="js/js.js"></script>
 </body>
 </html>
