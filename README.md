@@ -39,3 +39,15 @@ El negocio requiere una **plataforma web de difusión** que le permita mostrar s
 | Lenin Moreno | Product Manager, Programador |
 
 ---
+
+## 6. Nuevas Ideas A Implementar Con Js
+
+- Integracion de Menu lateral o menu hamburguesa con gestión de foco y ARIA.
+- Renderizacion dinamica de la seccion de servicios, utilizando tarjetas desde arreglo JS
+- Añadir un campo de busqueda, habra que añadir mas productos al sistema y agregar una seccion con los productos, para una mejor implementacion del campo de busqueda en tiempo real para esa sección.
+- Implementar un formulario de contacto, esto se hara en la pestaña de servicios, con validacion de datos y sanitización con mensajes de error.
+- Se agregara un carrito de compras, con un contador de productos, ademas de la suma de todos estos.
+- Se podra abrir modales como el carrito y el detalle de los productos
+- Creacion del modo claro/oscuro con un boton en la esquina superior para la preferencia del usuario
+---
+
