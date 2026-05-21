@@ -28,7 +28,7 @@
     btn.setAttribute("aria-controls", "panel-filtro-hamburguesa");
     btn.setAttribute("aria-expanded", "false");
     btn.setAttribute("aria-label", "Abrir filtros");
-    btn.innerHTML = `<span class="hamburger-icon" aria-hidden="true">☰</span> Filtros`;
+    btn.innerHTML = `<span class="hamburger-icon" aria-hidden="true">☰</span> Categoria`;
 
     // Panel deslizable
     const panel = document.createElement("div");

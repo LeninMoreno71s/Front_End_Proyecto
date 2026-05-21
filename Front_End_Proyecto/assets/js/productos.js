@@ -172,3 +172,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizarTarjetas("productos-container");
 });
 
+// Ajusta la altura de las imágenes de las tarjetas usando variable CSS
+function ajustarAlturaTarjetas(px) {
+  // px puede ser número (ej. 300) o string con unidad (ej. "300px")
+  const valor = (typeof px === "number") ? `${px}px` : px;
+  document.documentElement.style.setProperty('--card-img-height', valor);
+}

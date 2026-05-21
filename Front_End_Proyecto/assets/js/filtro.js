@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const label = document.createElement("label");
   label.htmlFor = "select-categoria";
-  label.textContent = "Filtrar por categoría: ";
+  label.textContent = "";
   label.className = "filtro-label";
 
   const select = document.createElement("select");
