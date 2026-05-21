@@ -1,35 +1,55 @@
 // productos.js (prueba mínima)
 console.log("productos.js cargado"); // confirma que el archivo se ejecuta
 // products.js
-// Arreglo de ejemplo con 4 productos
 const productos = [
   {
     id: "p1",
     nombre: "Traje de Oso Mistico",
     precio: 45000,
     descripcion: "Traje completo de Oso, ademas de cabeza hecha de metal",
-    imagen: "assets/img/oso_traje.webp"
+    imagen: "assets/img/oso_traje.webp",
+    categoria: "producto"
   },
   {
     id: "p2",
     nombre: "Traje de saya boys",
     precio: 15000,
     descripcion: "Disfraz completo, mas sombrero, de la pelicula Huntrx demon hunter",
-    imagen: "assets/img/saya-boy.webp"
+    imagen: "assets/img/saya-boy.webp",
+    categoria: "producto"
   },
   {
     id: "p3",
-    nombre: "Botas Teatrales",
+    nombre: "Vestido para niña",
     precio: 45000,
     descripcion: "Botas a medida para espectáculos, con suela reforzada y acabado profesional.",
-    imagen: "img/botas.jpg"
+    imagen: "assets/img/vestido_algo.jpg",
+    categoria: "producto"    
   },
   {
     id: "p4",
-    nombre: "Máscara Decorativa",
+    nombre: "Modificaciones",
     precio: 12000,
-    descripcion: "Máscara artesanal para eventos y sesiones fotográficas.",
-    imagen: "img/mascara.jpg"
+    descripcion: "Ajustes y cambios estructurales para que tus prendas queden a la perfección.",
+    imagen: "assets/img/serv-modificacion.png",
+    categoria: "servicio"
+  },
+  {
+    id: "p5",
+    nombre: "Creacion",
+    precio: 12000,
+    descripcion: "Confección de prendas desde cero, diseños únicos y personalizados para cada cliente.",
+    imagen: "assets/img/serv-creacion.png",
+    categoria: "servicio"
+
+  },
+  {
+    id: "p6",
+    nombre: "Reparacion",
+    precio: 12000,
+    descripcion: "Arreglos, composturas y renovaciones para dar nueva vida a su ropa favorita.",
+    imagen: "assets/img/serv-reparacion.png",
+    categoria: "servicio"
   }
 ];
 
@@ -152,4 +172,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizarTarjetas("productos-container");
 });
 
-// Export (si quieres reutilizar funciones desde otros módulos
